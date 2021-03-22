@@ -38,7 +38,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function ExamTable({data, user}) {
+export default function JobTable({data, user}) {
   const classes = useStyles();
   var rows = [];
 //   console.log('==============================',data)

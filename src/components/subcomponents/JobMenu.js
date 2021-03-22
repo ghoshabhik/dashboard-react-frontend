@@ -3,7 +3,7 @@ import Button from '@material-ui/core/Button';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 
-export default function ExamMenu({ selectedVal , keyId, user}) {
+export default function JobMenu({ selectedVal , keyId, user}) {
   const [stat, setStat] = React.useState(selectedVal)
   const [anchorEl, setAnchorEl] = React.useState(null);
 
