@@ -1,3 +1,5 @@
+/* eslint-disable */ 
+
 import React, {useState} from 'react'
 import Paper from '@material-ui/core/Paper';
 import TextField from '@material-ui/core/TextField';
@@ -9,7 +11,7 @@ import { useHistory } from 'react-router-dom';
 export const Login = ({setUser}) => {
     const [emailId, setEmailId] = useState("");
     const [emailPass, setEmailPass] = useState("");
-    const [msg, setMsg] = useState("");
+    // const [msg, setMsg] = useState("");
     const [showLoader, setShowLoader] = useState(false);
     const history = useHistory();
 

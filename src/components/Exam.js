@@ -1,3 +1,5 @@
+/* eslint-disable */ 
+
 import React, {useState, useEffect} from 'react'
 import { useHistory } from 'react-router-dom';
 import Container from '@material-ui/core/Container';
@@ -25,7 +27,7 @@ export const Exam = ({user}) => {
     }
 
     useEffect( () => {
-        if(Object.keys(user).length == 0){
+        if(Object.keys(user).length === 0){
             history.push('/login')
         }
         else{
