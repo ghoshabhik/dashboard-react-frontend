@@ -24,6 +24,7 @@ import { Project } from './Project';
 import { Exam } from './Exam';
 import { Book } from './Book';
 import { Job } from './Job';
+import { Todo } from './Todo';
 
 const drawerWidth = 240;
 
@@ -142,6 +143,12 @@ function ResponsiveDrawer(props) {
                         <ListItemText primary='Job Application Tracking' />
                     </ListItem>
                 </Link>
+                <Link to="/todo" style={{ textDecoration: "none", color: "gray" }}>
+                    <ListItem button key='todo'>
+
+                        <ListItemText primary='Todo - Task Management' />
+                    </ListItem>
+                </Link>
             </List>
         </div>
     );
@@ -212,6 +219,7 @@ function ResponsiveDrawer(props) {
                     <Route path='/exam' component={() => <Exam user={user} />} />
                     <Route path='/book' component={() => <Book user={user} />} />
                     <Route path='/job' component={() => <Job user={user} />} />
+                    <Route path='/todo' component={() => <Todo user={user} />} />
                 </main>
             </BrowserRouter>
         </div>
