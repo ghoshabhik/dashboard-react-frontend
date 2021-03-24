@@ -55,6 +55,7 @@ export default function JobTable({data, user}) {
    <Table className={classes.table} aria-label="customized table">
      <TableHead>
        <TableRow>
+       <StyledTableCell align="center">#</StyledTableCell>
          <StyledTableCell>Job Name</StyledTableCell>
          <StyledTableCell align="left">URL</StyledTableCell>
          <StyledTableCell align="center">Application Last Date</StyledTableCell>
@@ -62,8 +63,9 @@ export default function JobTable({data, user}) {
        </TableRow>
      </TableHead>
      <TableBody>
-       {rows.map((row) => (
+       {rows.map((row, i) => (
          <StyledTableRow key={row.id}>
+           <StyledTableCell align="center">{i+1}</StyledTableCell>
            <StyledTableCell component="th" scope="row">
              {row.JobName}
            </StyledTableCell>

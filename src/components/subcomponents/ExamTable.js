@@ -54,7 +54,7 @@ export default function ExamTable({data, user}) {
    const tableRows =  rows.length > 0 ? <TableContainer component={Paper}>
    <Table className={classes.table} aria-label="customized table">
      <TableHead>
-       <TableRow>
+       <TableRow><StyledTableCell align="center">#</StyledTableCell>
          <StyledTableCell>Exam Name</StyledTableCell>
          <StyledTableCell align="center">Exam Planned Date</StyledTableCell>
          <StyledTableCell align="center">Exam Registered</StyledTableCell>
@@ -64,8 +64,9 @@ export default function ExamTable({data, user}) {
        </TableRow>
      </TableHead>
      <TableBody>
-       {rows.map((row) => (
+       {rows.map((row, i) => (
          <StyledTableRow key={row.id}>
+           <StyledTableCell align="center">{i+1}</StyledTableCell>
            <StyledTableCell component="th" scope="row">
              {row.ExamName}
            </StyledTableCell>

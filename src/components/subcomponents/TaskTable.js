@@ -74,7 +74,7 @@ export default function TaskTable({ data, user, handleLoad }) {
   const tableRows = rows.length > 0 ? <TableContainer component={Paper}>
     <Table className={classes.table} aria-label="customized table">
       <TableHead>
-        <TableRow>
+        <TableRow><StyledTableCell align="center">#</StyledTableCell>
           <StyledTableCell>Task Name</StyledTableCell>
           <StyledTableCell align="left">Category</StyledTableCell>
           <StyledTableCell align="left">Task Date</StyledTableCell>
@@ -83,8 +83,9 @@ export default function TaskTable({ data, user, handleLoad }) {
         </TableRow>
       </TableHead>
       <TableBody>
-        {rows.map((row) => (
+        {rows.map((row, i) => (
           <StyledTableRow key={row.id}>
+            <StyledTableCell align="center">{i+1}</StyledTableCell>
             <StyledTableCell component="th" scope="row">
               {row.taskName}
             </StyledTableCell>

@@ -55,6 +55,7 @@ export default function BookTable({data, user}) {
    <Table className={classes.table} aria-label="customized table">
      <TableHead>
        <TableRow>
+       <StyledTableCell align="center">#</StyledTableCell>
          <StyledTableCell>Book Name</StyledTableCell>
          <StyledTableCell align="center">Author</StyledTableCell>
          <StyledTableCell align="center">Genre</StyledTableCell>
@@ -64,8 +65,9 @@ export default function BookTable({data, user}) {
        </TableRow>
      </TableHead>
      <TableBody>
-       {rows.map((row) => (
+       {rows.map((row, i) => (
          <StyledTableRow key={row.id}>
+           <StyledTableCell align="center">{i+1}</StyledTableCell>
            <StyledTableCell component="th" scope="row">
              {row.BookName}
            </StyledTableCell>
