@@ -76,10 +76,10 @@ export default function TaskTable({ data, user, handleLoad }) {
       <TableHead>
         <TableRow>
           <StyledTableCell>Task Name</StyledTableCell>
-          <StyledTableCell align="right">Category</StyledTableCell>
-          <StyledTableCell align="right">Task Date</StyledTableCell>
-          <StyledTableCell align="right">Planned Hours</StyledTableCell>
-          <StyledTableCell align="right">Actual Hours</StyledTableCell>
+          <StyledTableCell align="left">Category</StyledTableCell>
+          <StyledTableCell align="left">Task Date</StyledTableCell>
+          <StyledTableCell align="center">Planned Hours</StyledTableCell>
+          <StyledTableCell align="center">Actual Hours</StyledTableCell>
         </TableRow>
       </TableHead>
       <TableBody>
@@ -88,10 +88,10 @@ export default function TaskTable({ data, user, handleLoad }) {
             <StyledTableCell component="th" scope="row">
               {row.taskName}
             </StyledTableCell>
-            <StyledTableCell align="right">{row.taskCategory}</StyledTableCell>
-            <StyledTableCell align="right">{row.taskDate}</StyledTableCell>
-            <StyledTableCell align="right">{row.plannedHours}</StyledTableCell>
-            <StyledTableCell align="right"><TaskMenu selectedVal={row.actualHours} keyId={row.id} user={user} handleLoad={handleLoad}/></StyledTableCell>
+            <StyledTableCell align="left">{row.taskCategory}</StyledTableCell>
+            <StyledTableCell align="left">{row.taskDate}</StyledTableCell>
+            <StyledTableCell align="center">{row.plannedHours}</StyledTableCell>
+            <StyledTableCell align="center"><TaskMenu selectedVal={row.actualHours} keyId={row.id} user={user} handleLoad={handleLoad}/></StyledTableCell>
           </StyledTableRow>
         ))}
       </TableBody>

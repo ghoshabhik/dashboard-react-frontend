@@ -56,9 +56,9 @@ export default function JobTable({data, user}) {
      <TableHead>
        <TableRow>
          <StyledTableCell>Job Name</StyledTableCell>
-         <StyledTableCell align="right">URL</StyledTableCell>
-         <StyledTableCell align="right">Application Last Date</StyledTableCell>
-         <StyledTableCell align="right">Status</StyledTableCell>
+         <StyledTableCell align="left">URL</StyledTableCell>
+         <StyledTableCell align="center">Application Last Date</StyledTableCell>
+         <StyledTableCell align="center">Status</StyledTableCell>
        </TableRow>
      </TableHead>
      <TableBody>
@@ -67,9 +67,9 @@ export default function JobTable({data, user}) {
            <StyledTableCell component="th" scope="row">
              {row.JobName}
            </StyledTableCell>
-           <StyledTableCell align="right">{row.JobSiteURL}</StyledTableCell>
-           <StyledTableCell align="right">{row.LastDateOfApplication}</StyledTableCell>
-           <StyledTableCell align="right"><JobMenu selectedVal={row.Status} keyId={row.id} user={user}/></StyledTableCell>
+           <StyledTableCell align="left">{row.JobSiteURL}</StyledTableCell>
+           <StyledTableCell align="center">{row.LastDateOfApplication}</StyledTableCell>
+           <StyledTableCell align="center"><JobMenu selectedVal={row.Status} keyId={row.id} user={user}/></StyledTableCell>
          </StyledTableRow>
        ))}
      </TableBody>

@@ -56,11 +56,11 @@ export default function ExamTable({data, user}) {
      <TableHead>
        <TableRow>
          <StyledTableCell>Exam Name</StyledTableCell>
-         <StyledTableCell align="right">Exam Planned Date</StyledTableCell>
-         <StyledTableCell align="right">Exam Registered</StyledTableCell>
-         <StyledTableCell align="right">Topic Name</StyledTableCell>
-         <StyledTableCell align="right">Planned Start Date</StyledTableCell>
-         <StyledTableCell align="right">Status</StyledTableCell>
+         <StyledTableCell align="center">Exam Planned Date</StyledTableCell>
+         <StyledTableCell align="center">Exam Registered</StyledTableCell>
+         <StyledTableCell align="center">Topic Name</StyledTableCell>
+         <StyledTableCell align="center">Planned Start Date</StyledTableCell>
+         <StyledTableCell align="center">Status</StyledTableCell>
        </TableRow>
      </TableHead>
      <TableBody>
@@ -69,12 +69,12 @@ export default function ExamTable({data, user}) {
            <StyledTableCell component="th" scope="row">
              {row.ExamName}
            </StyledTableCell>
-           <StyledTableCell align="right">{row.ExamPlannedDate}</StyledTableCell>
-           <StyledTableCell align="right">{row.ExamRegistered}</StyledTableCell>
-           <StyledTableCell align="right">{row.ExamTopicName}</StyledTableCell>
-           <StyledTableCell align="right">{row.PlannedStartDate}</StyledTableCell>
+           <StyledTableCell align="center">{row.ExamPlannedDate}</StyledTableCell>
+           <StyledTableCell align="center">{row.ExamRegistered}</StyledTableCell>
+           <StyledTableCell align="left">{row.ExamTopicName}</StyledTableCell>
+           <StyledTableCell align="center">{row.PlannedStartDate}</StyledTableCell>
            {/* <StyledTableCell align="right">{row.Status}</StyledTableCell> */}
-           <StyledTableCell align="right"><ExamMenu selectedVal={row.Status} keyId={row.id} user={user}/></StyledTableCell>
+           <StyledTableCell align="center"><ExamMenu selectedVal={row.Status} keyId={row.id} user={user}/></StyledTableCell>
          </StyledTableRow>
        ))}
      </TableBody>

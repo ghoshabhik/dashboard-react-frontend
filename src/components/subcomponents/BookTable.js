@@ -29,8 +29,8 @@ const StyledTableRow = withStyles((theme) => ({
   },
 }))(TableRow);
 
-function createData(id, BookName, Author, PlannedStartDate, PlannedEndDate, Rating, Status) {
-  return { id, BookName, Author, PlannedStartDate, PlannedEndDate, Rating, Status };
+function createData(id, BookName, Author, Genre, Format, Rating, Status) {
+  return { id, BookName, Author, Genre, Format, Rating, Status };
 }
 
 
@@ -46,7 +46,7 @@ export default function BookTable({data, user}) {
 //   console.log('==============================',data)
   if(data.length > 0){
     data.map(topic => {
-        rows.push(createData(topic.id, topic.fields.BookName, topic.fields.Author, topic.fields.PlannedStartDate, topic.fields.PlannedEndDate,
+        rows.push(createData(topic.id, topic.fields.BookName, topic.fields.Author, topic.fields.Genre, topic.fields.Format,
           topic.fields.Rating, topic.fields.Status))
     })
     console.log('==============================',rows)
@@ -56,11 +56,11 @@ export default function BookTable({data, user}) {
      <TableHead>
        <TableRow>
          <StyledTableCell>Book Name</StyledTableCell>
-         <StyledTableCell align="right">Author</StyledTableCell>
-         <StyledTableCell align="right">Planned Start Date</StyledTableCell>
-         <StyledTableCell align="right">Planned End Date</StyledTableCell>
-         <StyledTableCell align="right">Rating</StyledTableCell>
-         <StyledTableCell align="right">Status</StyledTableCell>
+         <StyledTableCell align="center">Author</StyledTableCell>
+         <StyledTableCell align="center">Genre</StyledTableCell>
+         <StyledTableCell align="center">Format</StyledTableCell>
+         <StyledTableCell align="center">Rating</StyledTableCell>
+         <StyledTableCell align="center">Status</StyledTableCell>
        </TableRow>
      </TableHead>
      <TableBody>
@@ -69,11 +69,11 @@ export default function BookTable({data, user}) {
            <StyledTableCell component="th" scope="row">
              {row.BookName}
            </StyledTableCell>
-           <StyledTableCell align="right">{row.Author}</StyledTableCell>
-           <StyledTableCell align="right">{row.PlannedStartDate}</StyledTableCell>
-           <StyledTableCell align="right">{row.PlannedEndDate}</StyledTableCell>
-           <StyledTableCell align="right">{row.Rating}</StyledTableCell>
-           <StyledTableCell align="right"><BookMenu selectedVal={row.Status} keyId={row.id} user={user}/></StyledTableCell>
+           <StyledTableCell align="center">{row.Author}</StyledTableCell>
+           <StyledTableCell align="center">{row.Genre}</StyledTableCell>
+           <StyledTableCell align="center">{row.Format}</StyledTableCell>
+           <StyledTableCell align="center">{row.Rating}/5</StyledTableCell>
+           <StyledTableCell align="center"><BookMenu selectedVal={row.Status} keyId={row.id} user={user}/></StyledTableCell>
          </StyledTableRow>
        ))}
      </TableBody>

@@ -56,11 +56,11 @@ export default function ProjectTable({data, user}) {
      <TableHead>
        <TableRow>
          <StyledTableCell>Project</StyledTableCell>
-         <StyledTableCell align="right">Github Repo</StyledTableCell>
-         <StyledTableCell align="right">Planned Start Date</StyledTableCell>
-         <StyledTableCell align="right">Planned End Date</StyledTableCell>
-         <StyledTableCell align="right">Planned Days</StyledTableCell>
-         <StyledTableCell align="right">Status</StyledTableCell>
+         <StyledTableCell align="center">Github Repo</StyledTableCell>
+         <StyledTableCell align="center">Planned Start Date</StyledTableCell>
+         <StyledTableCell align="center">Planned End Date</StyledTableCell>
+         <StyledTableCell align="center">Planned Days</StyledTableCell>
+         <StyledTableCell align="center">Status</StyledTableCell>
        </TableRow>
      </TableHead>
      <TableBody>
@@ -69,11 +69,11 @@ export default function ProjectTable({data, user}) {
            <StyledTableCell component="th" scope="row">
              {row.Name}
            </StyledTableCell>
-           <StyledTableCell align="right">{row.GitHubUrl}</StyledTableCell>
-           <StyledTableCell align="right">{row.StartDate}</StyledTableCell>
-           <StyledTableCell align="right">{row.EndDate}</StyledTableCell>
-           <StyledTableCell align="right">{row.PlannedNoOfDays}</StyledTableCell>
-           <StyledTableCell align="right"><ProjectMenu selectedVal={row.Status} keyId={row.id} user={user}/></StyledTableCell>
+           <StyledTableCell align="center">{row.GitHubUrl}</StyledTableCell>
+           <StyledTableCell align="center">{row.StartDate}</StyledTableCell>
+           <StyledTableCell align="center">{row.EndDate}</StyledTableCell>
+           <StyledTableCell align="center">{row.PlannedNoOfDays}</StyledTableCell>
+           <StyledTableCell align="center"><ProjectMenu selectedVal={row.Status} keyId={row.id} user={user}/></StyledTableCell>
          </StyledTableRow>
        ))}
      </TableBody>
