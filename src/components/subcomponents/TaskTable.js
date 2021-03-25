@@ -105,7 +105,7 @@ export default function TaskTable({ data, user, handleLoad }) {
           <StyledTableRow key={row.id}>
             <StyledTableCell align="center">{i+1}</StyledTableCell>
             <StyledTableCell component="th" scope="row">
-            {row.id} - {row.taskName}
+            {row.taskName}
             </StyledTableCell>
             <StyledTableCell align="left">{row.taskCategory}</StyledTableCell>
             <StyledTableCell align="left">{row.taskDate}</StyledTableCell>
